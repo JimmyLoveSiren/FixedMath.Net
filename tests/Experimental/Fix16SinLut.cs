@@ -1,4 +1,4 @@
-﻿
+﻿#if !UNITY_5_3_OR_NEWER
 namespace FixMath.NET {
     partial struct Fix16 {
 
@@ -12844,3 +12844,4 @@ namespace FixMath.NET {
         #endregion
     }
 }
+#endif

@@ -1,4 +1,5 @@
-﻿using System;
+﻿#if !UNITY_5_3_OR_NEWER
+using System;
 using Xunit;
 
 namespace FixMath.NET
@@ -318,3 +319,4 @@ namespace FixMath.NET
         }
     }
 }
+#endif

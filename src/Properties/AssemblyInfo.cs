@@ -1,4 +1,5 @@
-﻿using System.Reflection;
+﻿#if !UNITY_5_3_OR_NEWER
+using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
@@ -37,3 +38,4 @@ using System.Runtime.InteropServices;
 
 // Allow internal methods to be tested
 [assembly: InternalsVisibleTo("Tests")]
+#endif

@@ -1,4 +1,5 @@
-﻿using System;
+﻿#if !UNITY_5_3_OR_NEWER
+using System;
 using System.Globalization;
 
 namespace FixMath.NET {
@@ -413,3 +414,4 @@ namespace FixMath.NET {
         }
     }
 }
+#endif
