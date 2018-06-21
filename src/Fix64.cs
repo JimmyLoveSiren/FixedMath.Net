@@ -650,7 +650,8 @@ namespace FixMath.NET
         /// </summary>
         public static Fix64 Sin(Fix64 x)
         {
-            var clampedL = ClampSinValue(x.m_rawValue, out var flipHorizontal, out var flipVertical);
+            bool flipHorizontal, flipVertical;
+            var clampedL = ClampSinValue(x.m_rawValue, out flipHorizontal, out flipVertical);
             var clamped = new Fix64(clampedL);
 
             // Find the two closest values in the LUT and perform linear interpolation
@@ -679,7 +680,8 @@ namespace FixMath.NET
         /// </summary>
         public static Fix64 FastSin(Fix64 x)
         {
-            var clampedL = ClampSinValue(x.m_rawValue, out bool flipHorizontal, out bool flipVertical);
+            bool flipHorizontal, flipVertical;
+            var clampedL = ClampSinValue(x.m_rawValue, out flipHorizontal, out flipVertical);
 
             // Here we use the fact that the SinLut table has a number of entries
             // equal to (PI_OVER_2 >> 15) to use the angle to index directly into it
