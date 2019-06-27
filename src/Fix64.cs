@@ -975,11 +975,13 @@ namespace FixMath.NET
             return m_rawValue.CompareTo(other.m_rawValue);
         }
 
+#if !UNITY_5_3_OR_NEWER
         public override string ToString()
         {
             // Up to 10 decimal places
             return ((decimal)this).ToString("0.##########");
         }
+#endif
 
         public static Fix64 FromRaw(long rawValue)
         {
